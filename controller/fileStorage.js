@@ -75,13 +75,4 @@ function returnImage(req, res){
     // })
 }
 
-function searchingObject(object){
-    let count = 0
-    object.forEach((item) => {
-        if(item.name.toLowerCase() === 'paraphistomum_sp'){
-            count += 1
-        }
-    })
-}
-
 module.exports = {uploadImage, returnImage}
