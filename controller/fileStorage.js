@@ -52,6 +52,7 @@ async function returnImage(req, res){
     if(!fs.existsSync(dir)){
         fs.mkdirSync(dir)
     }
+    console.log(dir)
     await bucket.file('images/'+fileName).download({destination: dir+'/'+fileName})
     const file = fs.createReadStream(dir+'/'+fileName)
     // const file = fs.createReadStream(dir+'/'+fileName)
