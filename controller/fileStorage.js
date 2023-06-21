@@ -22,6 +22,7 @@ function uploadImage(req, res) {
     bucket.upload(file.path,{
         destination: 'images/' + file.filename,
     }, function(err, file){
+        console.log('halo upload')
         if(err)throw err
         return res.send({
             'status': 200,
