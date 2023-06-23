@@ -46,7 +46,7 @@ function uploadImage(req, res) {
     // })
 }
 
-async function returnImage(req, res){
+const returnImage = async function returnImage(req, res){
     // console.log(req.body.filename)
     axios.defaults.baseURL = 'http://34.101.178.48:5000'
     const fileName = req.body.filename
